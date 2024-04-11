@@ -1,0 +1,6 @@
+@mixin title-2($color, $margin-bottom) {
+  color: $color;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: $margin-bottom;
+}

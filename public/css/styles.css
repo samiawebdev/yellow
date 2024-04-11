@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+#header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  padding: 10px 20% 0 20%;
+  justify-content: space-between; }
+  #header > div {
+    width: 150px; }
+  #header > nav {
+    display: flex; }
+    #header > nav > ul {
+      display: flex;
+      gap: 20px; }
+      #header > nav > ul li {
+        list-style-type: none;
+        color: white;
+        display: flex;
+        align-items: center; }
+
+#home {
+  height: 100vh;
+  background-image: url("/assets/images/bkg-hero-header.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #home > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    gap: 3rem; }
+    #home > div > h1 {
+      font-size: 4rem; }
+      #home > div > h1 span {
+        color: #ffb81c; }
+    #home > div > p {
+      font-size: 0.9rem;
+      text-align: center; }
+    #home > div > div {
+      margin-top: 40px;
+      display: flex;
+      gap: 30px; }
+      #home > div > div > a {
+        text-decoration: none;
+        color: inherit;
+        padding: 10px 50px;
+        border-radius: 2px; }
+      #home > div > div > a:nth-child(1) {
+        border: 2px solid white;
+        background-color: rgba(0, 0, 0, 0.3); }
+      #home > div > div > a:nth-child(2) {
+        background-color: #ffb81c;
+        border: 2px solid #ffb81c; }
+
+#about {
+  padding: 70px 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #about > h2 {
+    color: #545454;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 60px; }
+  #about > p {
+    color: #70767d;
+    text-align: center; }
+
+#projects {
+  background-color: #f5f5f5; }
+  #projects > div:nth-child(1) {
+    padding: 70px 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #projects > div:nth-child(1) > h2 {
+      color: #545454;
+      font-size: 2rem;
+      font-weight: bolder;
+      margin-bottom: 10px; }
+    #projects > div:nth-child(1) > p {
+      color: #70767d;
+      text-align: center; }
+  #projects > div:nth-child(2) {
+    display: flex; }
+    #projects > div:nth-child(2) > img {
+      width: 25%; }
+
+#testimonials {
+  background-image: url("/assets/images/bkg-testimonial.jpg");
+  background-size: cover;
+  padding: 70px 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #testimonials > h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 40px; }
+  #testimonials > div > img {
+    border-radius: 100%; }
+  #testimonials > div > div {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    border-radius: 100%; }
+    #testimonials > div > div:not(:first-child) {
+      background-color: white; }
+  #testimonials .msg-bubble {
+    position: relative;
+    width: 90%;
+    color: white;
+    text-align: center;
+    background-color: #6a4d96;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin-top: 30px; }
+    #testimonials .msg-bubble::after {
+      content: "";
+      position: absolute;
+      bottom: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 15px;
+      border-style: solid;
+      border-color: #6a4d96 transparent transparent transparent; }
+  #testimonials > div:last-child {
+    display: flex;
+    gap: 10px; }
+  #testimonials p {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px; }
+
+#services {
+  padding: 70px 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #services > h2 {
+    color: #545454;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 5px; }
+  #services > div {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between; }
+    #services > div article {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      #services > div article:nth-child(1) > h3 {
+        color: #f18b6d; }
+      #services > div article:nth-child(2) > h3 {
+        color: #ffb81c; }
+      #services > div article:nth-child(3) > h3 {
+        color: #6a4d96; }
+      #services > div article > div {
+        width: 30px; }
+    #services > div h3 {
+      text-align: center;
+      font-weight: bolder;
+      margin-bottom: 15px; }
+    #services > div p {
+      text-align: center;
+      color: #70767d; }
+
+#latest-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222f36;
+  padding: 70px 20%; }
+  #latest-news > h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 5px; }
+  #latest-news p {
+    color: #70767d; }
+  #latest-news > p {
+    margin-bottom: 50px; }
+  #latest-news > a {
+    width: 150px;
+    height: 35px;
+    background-color: #ffb81c;
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; }
+    #latest-news > a > div {
+      width: 15px; }
+    #latest-news > a > p {
+      font-size: 13px;
+      font-weight: bold;
+      color: white; }
+  #latest-news > div {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between; }
+    #latest-news > div > article {
+      width: 30%;
+      background-color: white;
+      border-radius: 3px; }
+      #latest-news > div > article > div > h3 {
+        font-weight: bolder;
+        color: #585d62;
+        margin-bottom: 40px; }
+      #latest-news > div > article > div > p {
+        color: #70767d;
+        font-size: 12px;
+        margin-bottom: 40px; }
+      #latest-news > div > article > div > a {
+        width: 150px;
+        height: 35px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #ffb81c; }
+        #latest-news > div > article > div > a > div {
+          width: 15px; }
+      #latest-news > div > article > div:last-child {
+        padding: 20px; }
+
+#figure-transition {
+  background-image: url("/assets/images/bkg-counter.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  #figure-transition > div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-weight: bold; }
+    #figure-transition > div > span {
+      font-size: 50px; }
+    #figure-transition > div:nth-child(2) {
+      border-left: 1px solid white;
+      border-right: 1px solid white; }
+
+#contact-us {
+  padding: 30px 20%; }
+
+footer #links {
+  background-color: #2e2e2e;
+  padding: 30px 20%;
+  display: flex;
+  gap: 200px; }
+  footer #links > ul > h3 {
+    color: white;
+    margin-bottom: 20px; }
+  footer #links > ul > li {
+    list-style-type: none;
+    color: #70767d;
+    font-size: 13px;
+    margin-bottom: 5px; }
+    footer #links > ul > li > i {
+      margin-right: 5px; }
+
+footer #lower-part {
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  footer #lower-part > p {
+    color: white; }
+    footer #lower-part > p > span {
+      color: #70767d; }

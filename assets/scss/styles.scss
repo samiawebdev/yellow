@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "./partials/color";
+@import "./partials/mixins";
+
+
+
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  padding: 10px 20% 0 20%;
+  justify-content: space-between;
+
+  & > div {
+    width: 150px;
+  }
+
+  & > nav {
+    display: flex;
+
+    & > ul {
+      display: flex;
+      gap: 20px;
+
+      & li {
+        list-style-type: none;
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+#home {
+  height: 100vh;
+  background-image: url("/assets/images/bkg-hero-header.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    gap: 3rem;
+
+    & > h1 {
+      font-size: 4rem;
+      & span {
+        color: $yellow;
+      }
+    }
+
+    & > p {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    & > div {
+      margin-top: 40px;
+      display: flex;
+      gap: 30px;
+
+      & > a {
+        text-decoration: none;
+        color: inherit;
+        padding: 10px 50px;
+        border-radius: 2px;
+      }
+
+      & > a:nth-child(1) {
+        border: 2px solid white;
+        background-color: rgba(black, 0.3);
+      }
+
+      & > a:nth-child(2) {
+        background-color: $yellow;
+        border: 2px solid $yellow;
+      }
+    }
+  }
+}
+
+#about {
+  padding: 70px 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > h2 {
+    @include title-2($black, 60px);
+  }
+
+  & > p {
+    color: $text-lightgray;
+    text-align: center;
+  }
+}
+
+#projects {
+  background-color: $background-lightgray;
+
+  & > div:nth-child(1) {
+    padding: 70px 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > h2 {
+      @include title-2($black, 10px);
+    }
+
+    & > p {
+      color: $text-lightgray;
+      text-align: center;
+    }
+  }
+
+  & > div:nth-child(2) {
+    display: flex;
+    & > img {
+      width: 25%;
+    }
+  }
+}
+
+#testimonials {
+  background-image: url("/assets/images/bkg-testimonial.jpg");
+  background-size: cover;
+  padding: 70px 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > h2 {
+    @include title-2(white, 40px);
+  }
+
+  & > div {
+    & > img {
+      border-radius: 100%;
+    }
+
+    & > div {
+      width: 10px;
+      height: 10px;
+      border: 1px solid white;
+      border-radius: 100%;
+      // background-color: white;
+      &:not(:first-child) {
+        background-color: white;
+      }
+    }
+  }
+
+  .msg-bubble {
+    position: relative;
+    width: 90%;
+    color: white;
+    text-align: center;
+    background-color: $purple;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 15px;
+      border-style: solid;
+      border-color: $purple transparent transparent transparent;
+    }
+  }
+
+  & > div:last-child {
+    display: flex;
+    gap: 10px;
+  }
+
+  p {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+}
+
+#services {
+  padding: 70px 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > h2 {
+    @include title-2($black, 5px);
+  }
+
+  & > div {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    article {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      &:nth-child(1) > h3 {
+        color: $blood-orange;
+      }
+
+      &:nth-child(2) > h3 {
+        color: $yellow;
+      }
+
+      &:nth-child(3) > h3 {
+        color: $purple;
+      }
+
+      & > div {
+        width: 30px;
+      }
+    }
+    h3 {
+      text-align: center;
+      font-weight: bolder;
+      margin-bottom: 15px;
+    }
+    p {
+      text-align: center;
+      color: $text-lightgray;
+    }
+  }
+}
+
+#latest-news {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $bluish-black;
+  padding: 70px 20%;
+
+  & > h2 {
+    @include title-2(white, 5px);
+  }
+  p{
+    color: $text-lightgray;
+  }
+
+  &>p{
+      margin-bottom: 50px;
+  }
+
+  >a {
+    width: 150px;
+    height: 35px;
+    background-color: $yellow;
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+
+    >div{
+      width: 15px;
+      
+    }
+
+    >p {
+      font-size: 13px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  >div {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    >article{
+      width: 30%;
+      background-color: white;
+      border-radius: 3px;
+
+      >div{
+        >h3{
+          font-weight: bolder;
+          color: darken($text-lightgray, 10%);
+          margin-bottom: 40px;
+        }
+
+        >p {
+          color: $text-lightgray;
+          font-size: 12px;
+          margin-bottom: 40px;
+        }
+
+        >a {
+          width: 150px;
+          height: 35px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          color: $yellow;
+      
+          >div{
+            width: 15px;
+            
+          }
+        }
+        
+
+        &:last-child{
+          padding: 20px;
+        }
+      }
+      
+    }
+  }
+}
+
+#figure-transition {
+  
+  background-image: url('/assets/images/bkg-counter.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  >div{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+
+    >span{
+      font-size: 50px;
+    }
+
+    &:nth-child(2){
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+    }
+  }
+
+}
+
+#contact-us {
+  padding: 30px 20%;
+}
+
+
+footer{
+
+  #links{
+    background-color: darken($color: $black, $amount: 15%);
+    padding: 30px 20%;
+    display: flex;
+    gap: 200px;
+    >ul{
+
+      >h3{
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      >li{
+        list-style-type: none;
+        color: $text-lightgray;
+        font-size: 13px;
+        margin-bottom: 5px;
+        >i{
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  #lower-part{
+    background-color: darken($black, 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    >p{
+      color: white;
+      >span{
+        color: $text-lightgray
+      }
+    }
+  }
+}
